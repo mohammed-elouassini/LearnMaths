@@ -1,0 +1,18 @@
+{
+  "name": "LearnMaths",
+  "short_name": "LearnMaths",
+  "description": "Révisez les mathématiques avec des fiches LaTeX et la répétition espacée.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdf5ef",
+  "theme_color": "#bf4b25",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+const DAILY_QUOTES = [
+  "Ce qui est destiné à une personne trouvera toujours son chemin jusqu'à elle. En attendant, travaille pour devenir celle qui saura l'accueillir.",
+  "Ne sous-estime jamais les efforts que tu fais dans le silence. Même lorsqu'ils échappent aux regards, ils ne sont pas perdus.",
+  "Tu n'as pas besoin d'être en avance sur les autres. Tu as simplement besoin de rester fidèle à ton propre chemin.",
+  "Certaines portes ne s'ouvrent pas au moment où tu le souhaites, mais parfois au moment où tu en as le plus besoin.",
+  "Une personne qui cultive son esprit construit une richesse que personne ne pourra lui retirer.",
+  "Même les jours où ton cœur est lourd, n'oublie pas que tu as encore en toi la force de recommencer.",
+  "Fais de tes études une intention, de tes efforts une discipline et de tes réussites une source de gratitude.",
+  "Ne laisse pas une mauvaise note te faire oublier toutes les belles capacités que tu portes en toi.",
+  "Avance avec douceur, mais ne renonce jamais à ce qui peut te faire grandir.",
+  "Ce que tu traverses aujourd'hui prépare peut-être une version de toi que tu n'imagines pas encore.",
+  "Il y a une beauté particulière chez ceux qui restent patients sans jamais cesser de faire de leur mieux.",
+  "Ne compare pas ton chapitre 2 au chapitre 20 d'une autre personne. Chaque chemin possède son propre rythme.",
+  "Lorsque tu fais de ton mieux, apprends aussi à laisser partir ce que tu ne peux pas contrôler.",
+  "Ton intelligence est un cadeau, ton éducation une responsabilité et ton savoir une lumière à faire grandir.",
+  "On peut être fatigué et continuer d'avancer. On peut douter et garder espoir. Les deux peuvent coexister.",
+  "Ne cherche pas à impressionner le monde. Construis une vie dont tu peux tirer de la fierté, même dans le silence.",
+  "Chaque page étudiée, chaque larme retenue et chaque effort répété ont leur importance. Rien de sincère n'est insignifiant.",
+  "La patience n'est pas l'absence d'ambition. C'est la capacité de poursuivre ses rêves sans perdre sa paix intérieure.",
+  "Ne te précipite pas pour devenir quelqu'un. Prends le temps de devenir pleinement toi-même.",
+  "Une réussite obtenue avec patience et intégrité aura toujours une saveur particulière.",
+  "Quand tu as l'impression de ne plus avancer, rappelle-toi que même les graines grandissent loin des regards.",
+  "Ne laisse pas la peur de l'échec prendre plus de place que la confiance en tes capacités.",
+  "Tu n'as pas besoin de tout comprendre aujourd'hui. Parfois, il suffit de faire le prochain pas avec confiance.",
+  "Cultive ton savoir autant que ton caractère. La beauté d'un esprit se révèle aussi dans la manière dont il traite les autres.",
+  "Certaines de tes plus grandes victoires seront celles que personne n'aura vues : te relever, patienter et ne pas abandonner.",
+  "Ne confonds jamais un retard avec un refus de la vie. Ce qui prend du temps peut aussi porter de belles choses.",
+  "Quelqu'un qui connaît sa valeur ne se diminue pas pour entrer dans des endroits où il n'est pas destiné à rester.",
+  "Travaille pour tes rêves, prie pour ce que tu espères et garde ton cœur en paix face à ce que tu ne maîtrises pas.",
+  "Même lorsque les résultats tardent, continue de semer. Tout effort mérite d'être honoré, même avant de porter ses fruits.",
+  "Que tes ambitions soient grandes, mais que ta paix intérieure le soit encore davantage.",
+  "Un jour, tu regarderas en arrière et tu remercieras la personne que tu es aujourd'hui de ne pas avoir abandonné.",
+];
+
+export function getQuoteOfTheDay(date: Date = new Date()): string {
+  return DAILY_QUOTES[(date.getDate() - 1) % DAILY_QUOTES.length];
+}
