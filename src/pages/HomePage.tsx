@@ -58,7 +58,7 @@ export function HomePage({ store, navigate }: HomePageProps) {
 
       <section className="grid grid-cols-1 gap-4 sm:grid-cols-3">
         <StatCard icon={CalendarCheck} label="Cartes à réviser" value={stats.due} tone="teal" />
-        <StatCard icon={Layers} label="Cartes au total" value={stats.total} tone="sky" />
+        <StatCard icon={Layers} label="Cartes au total" value={stats.total} tone="stone" />
         <StatCard icon={Trophy} label="Cartes maîtrisées" value={stats.mastered} tone="amber" />
       </section>
 
@@ -73,6 +73,8 @@ export function HomePage({ store, navigate }: HomePageProps) {
           Rappel quotidien à {reminderTime}
         </button>
       </div>
+
+      {reminderOpen && <ReminderModal store={store} onClose={() => setReminderOpen(false)} />}
 
       {recentDecks.length > 0 && (
         <section className="space-y-3">
@@ -112,7 +114,7 @@ export function HomePage({ store, navigate }: HomePageProps) {
 
 const TONES = {
   teal: 'bg-brand-50 text-brand-700 dark:bg-brand-950/50 dark:text-brand-300',
-  sky: 'bg-sky-50 text-sky-700 dark:bg-sky-950/50 dark:text-sky-300',
+  stone: 'bg-stone-100 text-stone-700 dark:bg-stone-800 dark:text-stone-200',
   amber: 'bg-amber-50 text-amber-700 dark:bg-amber-950/50 dark:text-amber-300',
 } as const;
 

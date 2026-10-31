@@ -14,7 +14,7 @@ const NAV_ITEMS: { section: Section; label: string; shortLabel: string; icon: ty
   { section: 'settings', label: 'Paramètres', shortLabel: 'Réglages', icon: Settings, route: { name: 'settings' } },
 ];
 
-export function sectionForRoute(route: Route): Section {
+function sectionForRoute(route: Route): Section {
   if (route.name === 'deck' || route.name === 'chapter') return 'decks';
   return route.name;
 }
