@@ -8,8 +8,10 @@ export default defineConfig({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['icon-512.png'],
-      manifest: false
+      includeAssets: ['icon-512.png', 'manifest.json'],
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
+      }
     })
   ],
   base: './',
