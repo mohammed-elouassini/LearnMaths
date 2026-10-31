@@ -10,7 +10,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon-512.png', 'manifest.json'],
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg}']
+        globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
+        navigateFallback: 'index.html',
+        navigateFallbackDenylist: [/^\/api\//]
       }
     })
   ],
